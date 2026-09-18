@@ -1,109 +1,119 @@
-# Weather_API_chatbot
-## AI Weather Assistant
-## Project Overview
+# AI Weather Assistant
 
-AI Weather Assistant is a Streamlit-based chatbot that provides real-time weather information for a city entered by the user. The application uses the Open-Meteo API to retrieve weather data and displays the results through a simple and interactive chat interface.
+## Overview
 
-## The application provides important weather details such as:
+AI Weather Assistant is a Streamlit-based weather chatbot that provides real-time weather information for different cities.
 
-Temperature
-Humidity
-Wind Speed
-Location
+Users can enter a natural language weather query, and the application extracts the city name and retrieves current weather information using the Open-Meteo API.
 
 ## Features
-Interactive chatbot interface
-Search weather by city name
-Real-time weather information
-Temperature displayed in Celsius
-Humidity percentage
-Wind speed in km/h
-Dark-themed user interface
-Weather details displayed in separate sections
-Uses Open-Meteo API
-No API key required
+
+- Interactive chatbot interface
+- Search weather by city name
+- Real-time weather information
+- Temperature in Celsius
+- Humidity information
+- Wind speed information
+- Location details
+- Simple and user-friendly interface
+- Dark-themed UI
+- No API key required
 
 ## Technologies Used
-Python
-Streamlit
-Requests
-Open-Meteo Weather API
-Regular Expressions
 
-## Project Structure
-AI-Weather-Assistant/
-│
-├── app.py
-│
-└── requirements.txt
+- Python
+- Streamlit
+- Requests
+- Open-Meteo API
+- Regular Expressions
 
 ## How It Works
 
-The user enters a weather-related question such as:
+The application follows these steps:
 
-What is the temperature in Chennai?
+1. The user enters a weather-related question.
+2. The application identifies the city name from the question.
+3. The Open-Meteo Geocoding API finds the location coordinates.
+4. The Open-Meteo Weather API retrieves the current weather information.
+5. The chatbot displays the weather details to the user.
+6. The weather information is also displayed in the Weather Details section.
 
-The application extracts the city name from the question and sends a request to the Open-Meteo Geocoding API.
+## Screenshot
+<img width="632" height="413" alt="Screenshot 2026-09-16 223819" src="https://github.com/user-attachments/assets/be4bf484-2fd2-4373-891f-97239ea24a95" />
 
-The location coordinates are then used to request current weather information from the Open-Meteo Weather API.
+<img width="641" height="246" alt="Screenshot 2026-09-16 223832" src="https://github.com/user-attachments/assets/b55975d6-855b-4901-bd00-481792b92b43" />
 
-## The retrieved information is displayed in the chatbot along with:
 
-Temperature
-Humidity
-Wind Speed
-Location
 
 ## Example
 
-User:
+User Query:
 
-What is the temperature in Chennai?
+    What is the temperature in Chennai?
 
-Assistant:
+Chatbot Response:
 
-The current temperature in Chennai, India is 30.5°C.
-The humidity is 75%, and the wind speed is 11.0 km/h.
+    The current temperature in Chennai, India is 30.5°C.
+    The humidity is 75%, and the wind speed is 11.0 km/h.
 
-The application also displays the weather information in a separate Weather Details section.
+## Weather Details
+
+The application displays:
+
+- Temperature
+- Humidity
+- Wind Speed
+- Location
+
+## Project Structure
+
+    AI-Weather-Assistant/
+    │
+    ├── app.py
+    ├── requirements.txt
+    └── README.md
 
 ## Installation
 
-Install the required Python libraries:
+Clone the repository:
 
-python -m pip install streamlit requests
+    git clone YOUR_GITHUB_REPOSITORY_URL
+
+Move into the project folder:
+
+    cd AI-Weather-Assistant
+
+Install the required packages:
+
+    python -m pip install -r requirements.txt
 
 ## Run the Application
 
-Open the project folder in VS Code and run:
+Run the Streamlit application using:
 
-python -m streamlit run app.py
+    python -m streamlit run app.py
 
-The application will open in your web browser.
-## Screenshot
-<img width="632" height="413" alt="Screenshot 2026-09-16 223819" src="https://github.com/user-attachments/assets/474c7338-92d4-4f1c-937d-40b22b55f8f8" />
-
-<img width="641" height="246" alt="Screenshot 2026-09-16 223832" src="https://github.com/user-attachments/assets/42cecebb-5ea6-4fc2-b89e-e24f82d02558" />
+The application will open in the web browser.
 
 ## API
 
-This project uses Open-Meteo, a weather API that provides weather information without requiring an API key.
+This project uses the Open-Meteo API to retrieve weather information.
 
-The application uses:
+The application uses the Open-Meteo Geocoding API to find the coordinates of a city and the Open-Meteo Forecast API to retrieve current weather data.
 
-Open-Meteo Geocoding API to find city coordinates
-Open-Meteo Forecast API to retrieve current weather data
+No API key is required for this project.
 
 ## Future Enhancements
-Weather forecast for upcoming days
-Rain prediction
-Weather icons
-Multiple language support
-Voice-based weather queries
-LLM-based natural language understanding
-Weather charts and visualizations
-Temperature unit selection
+
+- Weather forecast for upcoming days
+- Rain prediction
+- Weather icons
+- Weather charts
+- Voice-based weather queries
+- Multiple language support
+- LLM-based natural language understanding
+- Location-based weather detection
 
 ## Conclusion
 
-AI Weather Assistant provides a simple way to interact with weather information through a chatbot interface. It demonstrates the use of Python, Streamlit, API integration, and basic natural language processing in a practical application
+AI Weather Assistant demonstrates how Python, Streamlit, API integration, and natural language processing can be combined to create an interactive weather chatbot.
